@@ -1,7 +1,8 @@
 package com.example.day7.dto;
 
-public class LoginRequest {
-
+public class RegisterRequest {
+	
+	
 	private String username;
 	
 	private String password;
@@ -23,5 +24,5 @@ public class LoginRequest {
 	}
 	
 	
-	
+
 }
