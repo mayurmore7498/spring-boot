@@ -99,6 +99,30 @@ public class AuthController {
     	}
     	return "success";
     }
+    
+    
+    @GetMapping("/forgot-password")
+    public String frogotPage() {
+    	return "forgot-password";
+    }
+    
+    
+    public String forgotPassword(
+    		@RequestParam String email,
+    		Model model) {
+    	User user=userRepo.findByEmail(email).orElse(null);
+    	
+    	if(user ==null) {
+    		model.addAttribute("error","Email not registered ");
+    		return "forgot-password";
+    		}
+    	String otp=otpService.generateOtp(email);
+    	emailService.sendOtp(email,otp);
+    	
+    	model.addAttribute("email",email);
+    	return "reset-password";
+    	
+    }
 
     
     @PostMapping("/resend-otp")
