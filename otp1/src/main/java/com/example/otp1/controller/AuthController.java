@@ -76,6 +76,29 @@ public class AuthController {
 
         return "success";
     }
+    
+    
+    @GetMapping("/login")
+    public String loginPage() {
+    	return "login";
+    }
+    
+    
+    @PostMapping("/login")
+    public String login(
+    		@RequestParam String email,
+    		@RequestParam String password,
+    		Model model) {
+    	User user=userRepo.findByEmail(email).orElse(null);
+    	
+    	if(user == null ||!user.isEnabled()
+    			|| !user.getPassword().equals(password)) {
+    		model.addAttribute("error","Invalid email or Password ");
+    		return "login";
+    	
+    	}
+    	return "success";
+    }
 
     
     @PostMapping("/resend-otp")
