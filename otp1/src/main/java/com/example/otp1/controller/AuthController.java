@@ -122,6 +122,26 @@ public class AuthController {
     	model.addAttribute("email",email);
     	return "reset-password";
     	
+    	
+    	
+    }
+    
+    @PostMapping("/reset-password")
+    public String resetPassword(
+    		@RequestParam String email,
+    		@RequestParam String otp,
+    		@RequestParam  String newPassword,
+    		Model model) {
+    	if(!otpService.verifyOtp(email, otp)) {
+    		model.addAttribute("error","invalid otp");
+    		model.addAttribute("email",email);
+    		return "reset-password";
+    		
+    	}
+    	User user=userRepo.findByEmail(email).get();
+    	user.setPassword(newPassword);
+    	userRepo.save(user);
+    	return "success";
     }
 
     
