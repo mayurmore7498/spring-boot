@@ -26,7 +26,6 @@ public class BankService {
 
         auditService.log("Money deducted from account " + fromId);
 
-        // simulate failure
         if (amount > 5000) {
             throw new RuntimeException("Transfer failed");
         }
