@@ -10,20 +10,19 @@ import org.springframework.web.multipart.MultipartFile;
 
 @Service
 public class FileService {
-	
-	private final String uploadDir= "uploads/";
-	
-	public String upload(MultipartFile file) throws IOException{
-		Files.createDirectories(Paths.get(uploadDir));
-		
-		String fileName=System.currentTimeMillis()+"_"+file.getOriginalFilename();
-		String filePath=uploadDir+fileName;
-		
-		file.transferTo(new File(filePath));
-		
-		return filePath;
-		
-		
-	}
 
+    private final String uploadDir = "uploads/";
+
+    public String upload(MultipartFile file) throws IOException {
+
+        Files.createDirectories(Paths.get(uploadDir));
+
+        String fileName = System.currentTimeMillis() + "_" + file.getOriginalFilename();
+        String filePath = uploadDir + fileName;
+
+        file.transferTo(new File(filePath));
+
+        return filePath;
+    }
 }
+
