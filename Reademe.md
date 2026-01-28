@@ -57,3 +57,27 @@ The application simulates a **money transfer system with audit logging**, where 
 
 ## 🧠 Transaction Flow
 
+# File Upload & Download – Spring Boot
+
+## Features
+- Upload file
+- Download file
+- Save file info in database
+- Store file on server
+
+## Technologies
+- Spring Boot
+- Spring Web
+- Spring Data JPA
+- MySQL
+- MultipartFile
+
+## APIs
+POST /file/upload  
+GET /file/download/{id}
+
+## Learning
+- MultipartFile
+- File handling
+- Resource
+- ResponseEntity
