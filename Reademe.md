@@ -81,3 +81,21 @@ GET /file/download/{id}
 - File handling
 - Resource
 - ResponseEntity
+
+# Image Upload & Preview API – Spring Boot
+
+## Features
+- Upload image
+- Preview image in browser
+- Store image on server
+- Save image details in DB
+
+## APIs
+POST /image/upload
+GET /image/view/{id}
+
+## Learning
+- MultipartFile
+- MediaType
+- Resource
+- Image preview
