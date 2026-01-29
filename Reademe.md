@@ -99,3 +99,13 @@ GET /image/view/{id}
 - MediaType
 - Resource
 - Image preview
+
+🔗 APIs
+🔼 Upload Image
+POST /image/upload
+
+
+Form-data:
+
+key = image
+type = File
