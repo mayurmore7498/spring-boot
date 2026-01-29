@@ -109,3 +109,11 @@ Form-data:
 
 key = image
 type = File
+
+👁️ Image Preview (Browser)
+GET /image/view/{id}
+
+
+Example:
+
+http://localhost:8080/image/view/1
