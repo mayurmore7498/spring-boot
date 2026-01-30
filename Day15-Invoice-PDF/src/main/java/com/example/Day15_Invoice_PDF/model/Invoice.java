@@ -13,7 +13,7 @@ public class Invoice {
 	private long id;
 	
 	private String customerName;
-	private String invoiceData;
+	private String invoiceDate;
 	
 	private double totalAmount;
 
@@ -34,11 +34,11 @@ public class Invoice {
 	}
 
 	public String getInvoiceData() {
-		return invoiceData;
+		return invoiceDate;
 	}
 
-	public void setInvoiceData(String invoiceData) {
-		this.invoiceData = invoiceData;
+	public void setInvoiceDate(String invoiceData) {
+		this.invoiceDate = invoiceData;
 	}
 
 	public double getTotalAmount() {
@@ -48,6 +48,8 @@ public class Invoice {
 	public void setTotalAmount(double totalAmount) {
 		this.totalAmount = totalAmount;
 	}
+
+	
 	
 	
 	
