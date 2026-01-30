@@ -117,3 +117,29 @@ GET /image/view/{id}
 Example:
 
 http://localhost:8080/image/view/1
+
+
+
+# Invoice PDF Generation – Spring Boot
+
+## Features
+- Generate invoice PDF
+- Fetch data from database
+- Logo image in header
+- Footer message
+- Auto total calculation
+
+## Tech Stack
+- Spring Boot
+- OpenPDF
+- JPA
+- MySQL
+
+## API
+GET /invoice/pdf/{id}
+
+## Learning
+- PDF table
+- Image in PDF
+- Header footer
+- Database integration
