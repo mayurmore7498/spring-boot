@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Invoice System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Invoice Generator</h2>
+
+<div class="box">
+    <h3>Create Invoice</h3>
+
+    <input type="text" id="customer" placeholder="Customer Name">
+    <input type="date" id="date">
+    <button onclick="createInvoice()">Create Invoice</button>
+
+    <p id="invoiceId"></p>
+</div>
+
+<div class="box">
+    <h3>Add Invoice Item</h3>
+
+    <input type="text" id="product" placeholder="Product Name">
+    <input type="number" id="qty" placeholder="Quantity">
+    <input type="number" id="price" placeholder="Price">
+
+    <button onclick="addItem()">Add Item</button>
+</div>
+
+<div class="box">
+    <h3>Download Invoice PDF</h3>
+
+    <button onclick="downloadPdf()">Download PDF</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
