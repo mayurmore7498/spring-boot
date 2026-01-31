@@ -161,3 +161,105 @@ GET /invoice/pdf/{id}
 ## API
 POST /users/save
 
+# 🔗 Spring Boot JPA Relationships
+
+This project demonstrates **JPA entity relationships** using Spring Boot and MySQL.
+
+It covers the most important relationship mappings used in real-world backend applications.
+
+---
+
+## 🚀 Topics Covered
+
+- OneToOne Mapping
+- OneToMany Mapping
+- ManyToMany Mapping
+- Cascade Types
+- JoinColumn
+- JoinTable
+- mappedBy concept
+- Hibernate auto table creation
+
+---
+
+## 🛠️ Tech Stack
+
+- Java 21  
+- Spring Boot  
+- Spring Data JPA  
+- Hibernate  
+- MySQL  
+- Maven  
+
+---
+
+## 📂 Project Structure
+
+# 🔗 Spring Boot JPA Relationships
+
+This project demonstrates **JPA entity relationships** using Spring Boot and MySQL.
+
+It covers the most important relationship mappings used in real-world backend applications.
+
+---
+
+## 🚀 Topics Covered
+
+- OneToOne Mapping
+- OneToMany Mapping
+- ManyToMany Mapping
+- Cascade Types
+- JoinColumn
+- JoinTable
+- mappedBy concept
+- Hibernate auto table creation
+
+---
+
+## 🛠️ Tech Stack
+
+- Java 21  
+- Spring Boot  
+- Spring Data JPA  
+- Hibernate  
+- MySQL  
+- Maven  
+
+---
+
+## 📂 Project Structure
+
+JPA-Relationships
+│
+├── controller
+│ └── MainController.java
+│
+├── model
+│ ├── User.java
+│ ├── Profile.java
+│ ├── Customer.java
+│ ├── Order.java
+│ ├── Student.java
+│ └── Course.java
+│
+├── repository
+│ ├── UserRepository.java
+│ ├── CustomerRepository.java
+│ └── StudentRepository.java
+│
+└── application.properties
+
+---
+
+## 🔗 Relationship Examples
+
+### ✅ OneToOne
+**User ↔ Profile**
+
+- One user has one profile
+- Foreign key stored in user table
+
+```java
+@OneToOne(cascade = CascadeType.ALL)
+@JoinColumn(name = "profile_id")
+private Profile profile;
