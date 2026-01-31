@@ -143,3 +143,21 @@ GET /invoice/pdf/{id}
 - Image in PDF
 - Header footer
 - Database integration
+
+
+# Spring Boot Validation
+
+## Features
+- Bean validation
+- Custom error messages
+- Global exception handling
+
+## Annotations Used
+@NotBlank
+@Email
+@Min
+@Size
+
+## API
+POST /users/save
+
