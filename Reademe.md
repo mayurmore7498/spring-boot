@@ -263,3 +263,17 @@ JPA-Relationships
 @OneToOne(cascade = CascadeType.ALL)
 @JoinColumn(name = "profile_id")
 private Profile profile;
+
+# Custom Query – Spring Data JPA
+
+## Features
+- JPQL
+- Native SQL
+- Named parameters
+- LIKE search
+
+## APIs
+POST /employees/save
+GET /employees/department/{dept}
+GET /employees/salary/{amount}
+GET /employees/search/{name}
