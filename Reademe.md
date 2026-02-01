@@ -277,3 +277,10 @@ POST /employees/save
 GET /employees/department/{dept}
 GET /employees/salary/{amount}
 GET /employees/search/{name}
+
+POST http://localhost:8080/employees/save
+{
+  "name": "Mayur",
+  "department": "IT",
+  "salary": 45000
+}
