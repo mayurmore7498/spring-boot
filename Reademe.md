@@ -284,3 +284,6 @@ POST http://localhost:8080/employees/save
   "department": "IT",
   "salary": 45000
 }
+GET /employees/department/IT
+GET /employees/salary/40000
+GET /employees/search/May
