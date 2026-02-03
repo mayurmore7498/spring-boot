@@ -287,3 +287,20 @@ POST http://localhost:8080/employees/save
 GET /employees/department/IT
 GET /employees/salary/40000
 GET /employees/search/May
+
+# Excel Export – Spring Boot
+
+## Features
+- Export database records to Excel
+- Download XLSX file
+- Apache POI usage
+
+## APIs
+POST /employees/save
+GET /employees/export
+
+## Tech
+- Spring Boot
+- JPA
+- MySQL
+- Apache POI
